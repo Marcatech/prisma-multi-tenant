@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-  "@prisma-multi-tenant/client": "git+https://github.com/Marcatech/prisma-multi-tenant.git#main:packages/client",
+    "@prisma-multi-tenant/client": "git://github.com/Marcatech/pmt-client.git",
     "express": "*"
   },
   "devDependencies": {

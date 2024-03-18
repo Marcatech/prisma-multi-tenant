@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-  "@prisma-multi-tenant/client": "git+https://github.com/Marcatech/prisma-multi-tenant.git#main:packages/client",
+    "@prisma-multi-tenant/client": "file:C:/Users/Domme/Documents/Coding/Marcatech/GithubOrg/MT/fix-deps/prisma-multi-tenant/packages/client",
     "apollo-server": "^2.16.0",
     "graphql": "^15.3.0"
   },

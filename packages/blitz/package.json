@@ -20,7 +20,7 @@
     "prettier": "prettier \"src/**/*.ts\" --check"
   },
   "dependencies": {
-    "@prisma-multi-tenant/client": "git+https://github.com/Marcatech/prisma-multi-tenant.git#main:packages/client",
+    "@prisma-multi-tenant/client": "git://github.com/Marcatech/pmt-client.git",
     "@prisma/client": "^2.21.2"
   },
   "peerDependencies": {
