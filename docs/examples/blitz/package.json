@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "@prisma-multi-tenant/blitz": "2.3.1",
-    "@prisma-multi-tenant/client": "file:C:/Users/Domme/Documents/Coding/Marcatech/GithubOrg/MT/fix-deps/prisma-multi-tenant/packages/client",
+  "@prisma-multi-tenant/client": "git+https://github.com/Marcatech/prisma-multi-tenant.git#main:packages/client",
     "@prisma/cli": "2.4.1",
     "@prisma/client": "2.4.1",
     "blitz": "0.17.0",

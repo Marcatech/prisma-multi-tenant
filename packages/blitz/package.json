@@ -20,7 +20,7 @@
     "prettier": "prettier \"src/**/*.ts\" --check"
   },
   "dependencies": {
-    "@prisma-multi-tenant/client": "file:C:/Users/Domme/Documents/Coding/Marcatech/GithubOrg/MT/fix-deps/prisma-multi-tenant/packages/client",
+    "@prisma-multi-tenant/client": "git+https://github.com/Marcatech/prisma-multi-tenant.git#main:packages/client",
     "@prisma/client": "^2.21.2"
   },
   "peerDependencies": {
@@ -41,7 +41,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "typescript": "^3.2.2"
-      },
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Errorname/prisma-multi-tenant.git"

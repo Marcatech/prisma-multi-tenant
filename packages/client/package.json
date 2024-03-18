@@ -19,7 +19,7 @@
     "prettier": "prettier \"src/**/*.ts\" --check"
   },
   "dependencies": {
-    "@prisma-multi-tenant/client": "file:C:/Users/Domme/Documents/Coding/Marcatech/GithubOrg/MT/fix-deps/prisma-multi-tenant/packages/client",
+    "@prisma-multi-tenant/client": "^2.5.0",
     "@prisma-multi-tenant/shared": "2.5.0",
     "@types/express": "^4.0.37",
     "@types/express-serve-static-core": "^4.0.50",
