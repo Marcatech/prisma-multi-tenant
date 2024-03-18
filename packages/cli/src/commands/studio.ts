@@ -1,4 +1,4 @@
-import { Management, runDistantPrisma, getSchemaPath } from '@prisma-multi-tenant/shared'
+import { Management, runDistantPrisma, getSchemaPath } from '../../../shared/src'
 
 import { Command, CommandArguments } from '../types'
 import chalk from 'chalk'
@@ -44,7 +44,7 @@ class Studio implements Command {
       // There is currently a bug with @prisma/cli where the studio error is malformed.
       // We will assume that if it throws with a code 7, it's an issue with the port.
       // See: https://github.com/prisma/prisma/issues/3309
-      if (err.message.includes('EADDRINUSE') || err.code === 7) {
+      if ((err as any).message.includes('EADDRINUSE') || (err as any).code === 7) {
         console.log(chalk.red(`  The port for studio is already being used, try another one:`))
         console.log(`  > prisma-multi-tenant studio ${name} --port ${Number(port) + 1}\n`)
       } else {

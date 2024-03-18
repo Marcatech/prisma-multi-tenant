@@ -11,11 +11,11 @@
   "license": "ISC",
   "dependencies": {
     "@prisma/client": "^2.4.1",
-    "@prisma-multi-tenant/client": "^2.3.1"
-  },
+    "@prisma-multi-tenant/client": "file:C:/Users/Domme/Documents/Coding/Marcatech/GithubOrg/MT/fix-deps/prisma-multi-tenant/packages/client"
+    },
   "devDependencies": {
     "@prisma/cli": "^2.4.1",
     "ts-node": "8.6.2",
-    "typescript": "3.8.2"
-  }
+    "typescript": "^3.2.2"
+    }
 }

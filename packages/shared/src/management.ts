@@ -54,7 +54,7 @@ export default class Management {
         data: tenant,
       })
     } catch (err) {
-      if (err.code == 'P2002') throw new PmtError('tenant-already-exists', tenant.name)
+      if ((err as any).code == 'P2002') throw new PmtError('tenant-already-exists', tenant.name)
       throw err
     }
   }
@@ -96,7 +96,7 @@ export default class Management {
         data: update,
       })
     } catch (err) {
-      if (err.message.includes('RecordNotFound')) throw new PmtError('tenant-does-not-exist', name)
+      if ((err as Error).message.includes('RecordNotFound')) throw new PmtError('tenant-does-not-exist', name)
       throw err
     }
   }
@@ -107,7 +107,7 @@ export default class Management {
     try {
       return await client.tenant.delete({ where: { name } })
     } catch (err) {
-      if (err.message.includes('RecordNotFound')) throw new PmtError('tenant-does-not-exist', name)
+      if ((err as Error).message.includes('RecordNotFound')) throw new PmtError('tenant-does-not-exist', name)
       throw err
     }
   }

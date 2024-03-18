@@ -1,7 +1,7 @@
 import path from 'path'
 import fs from 'fs'
 
-import { Management, runDistantPrisma, requireDistant } from '@prisma-multi-tenant/shared'
+import { Management, runDistantPrisma, requireDistant } from '../../shared/src'
 
 interface MultiTenantOptions {
   useManagement?: boolean

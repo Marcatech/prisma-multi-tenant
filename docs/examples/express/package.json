@@ -10,8 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@prisma-multi-tenant/client": "^2.3.1",
-    "express": "^4.17.1"
+    "@prisma-multi-tenant/client": "file:C:/Users/Domme/Documents/Coding/Marcatech/GithubOrg/MT/fix-deps/prisma-multi-tenant/packages/client",
+    "express": "*"
   },
   "devDependencies": {
     "@prisma/cli": "^2.4.1"

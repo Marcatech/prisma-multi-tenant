@@ -14,7 +14,7 @@ import {
   isPrismaCliLocallyInstalled,
   translateDatasourceUrl,
   getSchemaPath,
-} from '@prisma-multi-tenant/shared'
+} from '../../../shared/src'
 
 import { Command, CommandArguments } from '../types'
 import { useYarn } from '../helpers/misc'
@@ -23,7 +23,6 @@ import prompt from '../helpers/prompt'
 import generate from './generate'
 import migrate from './migrate'
 
-const packageJson = require('../../package.json')
 
 class Init implements Command {
   name = 'init'
@@ -81,13 +80,14 @@ class Init implements Command {
     const isUsingYarn = await useYarn()
     const command = isUsingYarn ? 'yarn add --ignore-workspace-root-check' : 'npm install'
     const devOption = isUsingYarn ? '--dev' : '-D'
-
-    await runShell(`${command} @prisma-multi-tenant/client@${packageJson.version}`)
+    console.log("Modified version of this is installing the client from local disk instead of from npm");
+    
+    await runShell(`${command} file:C:/Users/Domme/Documents/Coding/Marcatech/GithubOrg/MT/fix-deps/prisma-multi-tenant/packages/client`)
 
     if (!(await isPrismaCliLocallyInstalled())) {
-      console.log('\n  Also installing `@prisma/cli` as a dev dependency in your app...')
+      console.log('\n  Also installing `prisma` as a dev dependency in your app...')
 
-      await runShell(`${command} ${devOption} @prisma/cli`)
+      await runShell(`${command} ${devOption} prisma`)
     }
   }
 
@@ -223,7 +223,7 @@ class Init implements Command {
     const modelNameSingular = firstModelMapping.model.toLowerCase()
 
     const script = `
-      // const { PrismaClient } = require('@prisma/client') // Uncomment for TypeScript support
+      const { PrismaClient } = require('@prisma/client') 
       const { MultiTenant } = require('@prisma-multi-tenant/client')
 
       // This is the name of your first tenant, try with another one

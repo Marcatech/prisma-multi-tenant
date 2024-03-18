@@ -1,6 +1,6 @@
 {
   "name": "@prisma-multi-tenant/client",
-  "version": "2.4.2",
+  "version": "2.5.0",
   "description": "Shared methods and constants for prisma-multi-tenant",
   "author": {
     "name": "Thibaud Courtoison",
@@ -14,16 +14,19 @@
     "build"
   ],
   "scripts": {
-    "prepare": "rm -rf build && npm run build",
     "build": "tsc",
     "lint": "eslint src/**/*.ts",
     "prettier": "prettier \"src/**/*.ts\" --check"
   },
   "dependencies": {
-    "@prisma-multi-tenant/shared": "^2.4.2"
+    "@prisma-multi-tenant/client": "file:C:/Users/Domme/Documents/Coding/Marcatech/GithubOrg/MT/fix-deps/prisma-multi-tenant/packages/client",
+    "@prisma-multi-tenant/shared": "2.5.0",
+    "@types/express": "^4.0.37",
+    "@types/express-serve-static-core": "^4.0.50",
+    "@types/koa": "^2.15.0"
   },
   "peerDependencies": {
-    "@prisma/cli": "^2.10.1"
+    "prisma": "^2.21.2"
   },
   "devDependencies": {
     "@types/node": "^14.0.23",
@@ -33,7 +36,7 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
     "prettier": "^2.0.5",
-    "typescript": "^3.9.6"
+    "typescript": "^4.4.3"
   },
   "repository": {
     "type": "git",

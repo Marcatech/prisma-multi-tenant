@@ -4,11 +4,9 @@ import { Command } from '../types'
 
 import * as commands from '../commands'
 
-const packageJson = require('../../package.json')
-
 const printGlobalHelp = (): void => {
   console.log(chalk`
-  {bold.cyan 🧭  prisma-multi-tenant} {grey v${packageJson.version}}
+  {bold.cyan 🧭  prisma-multi-tenant} {grey v_custom}
   
   {bold USAGE}
 
@@ -115,7 +113,7 @@ ${command.args
 }
 
 const printGlobalVersion = (): void => {
-  console.log(packageJson.version)
+  console.log("custom")
 }
 
 export default {

@@ -1,4 +1,4 @@
-import { Management } from '@prisma-multi-tenant/shared'
+import { Management } from '../../shared/src'
 
 export interface Command {
   name: string
